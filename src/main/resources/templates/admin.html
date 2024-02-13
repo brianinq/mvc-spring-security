@@ -2,16 +2,13 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Welcome</title>
+    <title>Admins</title>
 </head>
 <body>
-    <h2>Hello and welcome</h2>
+    <h2>Welcome to the admins page</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam beatae consectetur cumque debitis, delectus distinctio, dolor dolorem expedita facilis ipsum itaque iure nihil non possimus quidem quis ratione rerum suscipit!</p>
     <p>
-        <a th:href="@{/leaders}">Leaders page</a>
-    </p>
-    <p>
-        <a th:href="@{/admin}">Admins page</a>
+        <a th:href="@{/}">Home</a>
     </p>
 <form th:action="@{/logout}" method="post">
     <button type="submit">Logout</button>

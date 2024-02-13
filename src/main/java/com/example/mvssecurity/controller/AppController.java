@@ -9,4 +9,12 @@ public class AppController {
     public String home(){
         return "home";
     }
+    @GetMapping("/admin")
+    public String admin(){
+        return "admin";
+    }
+    @GetMapping("/leaders")
+    public String leaders(){
+        return "leaders";
+    }
 }

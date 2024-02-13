@@ -36,7 +36,11 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
         http.authorizeHttpRequests(configurer ->
-                configurer.anyRequest().authenticated()
+                configurer
+                        .requestMatchers("/").hasRole("EMPLOYEE")
+                        .requestMatchers("/admin").hasRole("ADMIN")
+                        .requestMatchers("/leaders").hasRole("MANAGER")
+                        .anyRequest().authenticated()
                 )
                 .formLogin(form ->
                         form.loginPage("/showLogin") //custom login route
