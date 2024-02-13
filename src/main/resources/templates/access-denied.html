@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Admins</title>
+</head>
+<body>
+    <h2>Access Denied!</h2>
+    <p>You don't have the right permissions to view this page.</p>
+    <p>
+        <a th:href="@{/}">Go back Home</a>
+    </p>
+<form th:action="@{/logout}" method="post">
+    <button type="submit">Logout</button>
+</form>
+</body>
+</html>

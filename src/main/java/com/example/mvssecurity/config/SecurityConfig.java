@@ -47,7 +47,10 @@ public class SecurityConfig {
                                 .loginProcessingUrl("/authenticate") //form submitted to this urf for processing
                                 .permitAll()
                 )
-                .logout(LogoutConfigurer::permitAll);
+                .logout(LogoutConfigurer::permitAll)
+                .exceptionHandling(configurer->
+                        configurer.accessDeniedPage("/access-denied")
+                );
         return http.build();
     }
 }
